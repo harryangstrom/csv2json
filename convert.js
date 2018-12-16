@@ -12,7 +12,7 @@ const convert = (file) => {
     .fromFile(thisfile)
     .then((jsonObj) => {
       console.log(jsonObj);
-      str = JSON.stringify(jsonObj); //convert the JSON object to string
+      str = JSON.stringify(jsonObj, null, '\t'); //convert the JSON object to string, formatted output
       //create and write the json file with the content.
       fs.writeFile(thatfile, str, (err) => {
         if (err) throw err;
