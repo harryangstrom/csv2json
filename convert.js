@@ -5,7 +5,7 @@ const csv2json = require('csvtojson');
 //Main function: it gets the file to be converted and write a json file with the output.
 //Everything is treated async to not block the processes.
 const convert = (file) => {
-  if (!file) return console.log('Usage: node convert filename [output]'); //if the file does not exist, it prints usage
+  if (!file) return console.log('Usage: node convert filename'); //if the file does not exist, it prints usage
   const thisfile = path.join(__dirname, file); //path_to_csv_file
   const thatfile = path.join(__dirname, path.basename(thisfile, '.csv') + '.json'); //path_to_json_file
   csv2json()

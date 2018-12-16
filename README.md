@@ -1,3 +1,3 @@
 # csv2json
 
-Usage: node convert filename [output]
+Usage: node convert filename
